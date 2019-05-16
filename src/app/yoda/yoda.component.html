@@ -1,0 +1,13 @@
+<h2>Les questions de Maître Yoda</h2>
+<app-question *ngFor="let question of questions"
+              [question]="question.title"
+              [id]="question.id"
+              [answer]="question.answer"
+              [score]="question.score"
+              (getAnswer)="onGetAnswer(question.score)"
+></app-question>
+<button type="button" (click)="onClick()">Valider</button>
+  <h3>Ton score est de {{average}}/20 !</h3>
+    <p *ngIf="checked">Okay young padawan now you feel the dev force !</p>
+    <p *ngIf="!checked">Go and never come back...!</p>
+

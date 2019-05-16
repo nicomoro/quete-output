@@ -3,10 +3,14 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { YodaComponent } from './yoda/yoda.component';
+import { QuestionComponent } from './question/question.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    YodaComponent,
+    QuestionComponent
   ],
   imports: [
     BrowserModule,

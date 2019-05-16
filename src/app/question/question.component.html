@@ -1,0 +1,15 @@
+<fieldset>
+  <legend>{{id}}-{{question}}</legend>
+  <div class="row">
+      <input [disabled]="checked" (click)="sendAnswer(true)" type="checkbox" id="true" name="interest" value="true">
+      <label for="true">Oui</label>
+      <input [disabled]="checked" (click)="sendAnswer(false)" type="checkbox" id="false" name="interest" value="false">
+      <label for="false">Non</label>
+  </div>
+  <div *ngIf="response && checked" class="alert alert-success">
+    Bonne réponse ! Vous avez gagné {{score}} points
+  </div>
+  <div *ngIf="!response && checked" class="alert alert-danger">
+    Mauvaise réponse !
+  </div>
+</fieldset>
